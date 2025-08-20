@@ -100,8 +100,8 @@ class BoardTest {
         var awayTeam1 = new Team("Away1");
         var homeTeam2 = new Team("Home2");
         var awayTeam2 = new Team("Away2");
-        var homeTeam3 = new Team("Home2");
-        var awayTeam3 = new Team("Away2");
+        var homeTeam3 = new Team("Home3");
+        var awayTeam3 = new Team("Away3");
 
         var gameId1 = board.startGame(homeTeam1, awayTeam1);
         var gameId2 = board.startGame(homeTeam2, awayTeam2);
