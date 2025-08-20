@@ -11,7 +11,8 @@ This library provides classes to manage board of live football games and their s
 ## Features
 
 - Start a game (returns a game ID, creates game with initial score 0:0)
-- Update the score of a game by its ID
+- Update the score of a game by its ID (assumed that single publisher updates score of specific game - no score update
+  time for comparison)
 - Get a board summary (live games sorted by total score and start time - highest score and most recent on top)
 - Finish a game and remove it from the board (returns finished game for processing)
 

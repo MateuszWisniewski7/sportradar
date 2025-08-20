@@ -3,13 +3,13 @@ package com.sportradar.football.live;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.Comparator.comparing;
+import static java.util.Comparator.reverseOrder;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -51,8 +51,7 @@ public class Board {
     public List<Game> getSummary() {
         return games.values().stream()
                 .sorted(comparing(Game::totalScore).reversed()
-                        .thenComparing(Game::startTime, Comparator.reverseOrder())
-                )
+                        .thenComparing(Game::startTime, reverseOrder()))
                 .toList();
     }
 }
