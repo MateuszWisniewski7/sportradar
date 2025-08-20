@@ -31,9 +31,7 @@ var away = new Team("Brazil");
 var score = new Score(2, 1);
 
 var gameId = board.startGame(game);
-board.
-
-updateScore(gameId, score);
+board.updateScore(gameId, score);
 
 var summary = board.getSummary();
 
